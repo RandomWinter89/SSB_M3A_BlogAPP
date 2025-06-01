@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100svh;
+  display: flex;
+}
+
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.HorizontalLine {
+  display: flex;
+  flex-direction: row;
+}
+
+.HorizontalLine::before,
+.HorizontalLine::after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 2px solid #000;
+  margin-block: auto;
+  margin-inline: 1rem;
+}
